@@ -29,7 +29,7 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
-    while (playerScore < 5 && computerScore < 5) {
+    while (playerScore < 3 && computerScore < 3) {
         let playerSelection = prompt("Choose your hand!", "Rock? Paper? Scissors?");
         let computerSelection = getComputerChoice();
 
