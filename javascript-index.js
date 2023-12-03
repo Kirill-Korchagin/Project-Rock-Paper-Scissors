@@ -24,12 +24,24 @@ function playRound(playerSelection, computerSelection) {
     } else if (player === "Rock" && computer === "Scissors") {
         return "You Win! Rock beats Scissors";
     } else if (player === "Scissors" && computer === "Paper") {
-        return "You Win! Scissors beat Paper";      
+        return "You Win! Scissors beat Paper";
+    } else if (player != "Paper" || "Rock" || "Scissors") {
+        return "Wrong selection, try again!";
     } else {
         return "It's a tie, play again!";
     }
 }
 
-// const playerSelection = "rOCK";
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
+// 3 lines below test the correct functionality of playRound():
+const playerSelection = prompt("Choose your hand!", "Rock? Paper? Scissors?");
+const computerSelection = getComputerChoice();
+
+function game() {
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
+}
+
+game();
