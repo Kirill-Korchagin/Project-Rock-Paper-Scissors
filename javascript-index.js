@@ -31,28 +31,35 @@ function game() {
 
     while (playerScore < 3 && computerScore < 3) {
         let playerSelection = prompt("Choose your hand!", "Rock? Paper? Scissors?");
-        let computerSelection = getComputerChoice();
+        if (playerSelection) {
+            let computerSelection = getComputerChoice();
 
-        let round = playRound(playerSelection, computerSelection);
+            let round = playRound(playerSelection, computerSelection);
     
-        if (round.includes("You Win")) {
-            playerScore += 1;
-        } else if (round.includes("You Lose")) {
-            computerScore += 1;
+            if (round.includes("You Win")) {
+                playerScore += 1;
+            } else if (round.includes("You Lose")) {
+                computerScore += 1;
+            }
+
+            alert(round);
+            alert("Player score: " + playerScore);
+            alert("Computer score: " + computerScore);  
+        
+        } else {
+            alert("Game Cancelled!");
         }
 
-        console.log(round);
-        console.log("Player score: " + playerScore);
-        console.log("Computer score: " + computerScore);  
-    }
+    } 
 
     if (playerScore === computerScore) {
-        console.log("The Match Is A Tie!")
+        alert("The Match Is A Tie!")
     } else if (playerScore < computerScore) {
-        console.log("You Lose The Match!");
+        alert("You Lose The Match!");
     } else {
-        console.log("You Win The Match!");
+        alert("You Win The Match!");
     }
+        
 
 }
 
