@@ -42,9 +42,7 @@ function game() {
                 computerScore += 1;
             }
 
-            alert(round);
-            alert("Player score: " + playerScore);
-            alert("Computer score: " + computerScore);  
+            alert(round + `\n` + "Player score: " + playerScore + `\n` + "Computer score: " + computerScore);
         
         } else {
             alert("Game Cancelled!");
